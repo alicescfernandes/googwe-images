@@ -1,0 +1,20 @@
+{
+  "name": "Googwe Images",
+  "version": "1.0.0",
+  "description": "Stuff",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alice Fernandes",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-svgo": "^2.1.1",
+    "gulp-terser": "^1.2.0",
+    "node-sass": "^4.13.0",
+    "terser": "^4.4.3"
+  }
+}

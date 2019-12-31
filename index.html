@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Googwe Images</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    </head>
+
+    <body data-mode="dark"  >
+        <input class="hide" type="hidden" value="" id="search_input">
+        <input class="hide" type="hidden" value="" id="search_color">
+        <input class="hide" type="file" id="search_image" accept="image/*">
+        <main>
+            <section class="search-box-content show-if-results">    
+                <div style="height: 40px;"class="block">
+                    <div class="logo-small">
+                        <a href="/#">
+                            <h1>Googwe</h1>
+                        </a>
+                    </div>
+                    <div class="search-box">
+                        <div class="search-box-input search-box-input-small">
+                            <div class="search-box-input-image">
+                                <span>
+                                    <img src="Images/face/img_1.jpg">
+                                </span>
+                            
+                                <p>image.jpeg</p>
+                            
+                                <span class="search-box-input-image-close">&#10005;</span>
+                            </div>
+
+                            <input value="" type="search" class="search_input">
+                        </div>
+                        <div class="search-box-icons">
+                            <button class="choose_image icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" style="isolation:isolate"
+                                    viewBox="0 0.3 14.5 13.6">
+                                    <defs />
+                                    <path
+                                        d="M12.9.3H1.6C.7.3 0 1 0 1.9v10.3c0 1 .7 1.7 1.6 1.7H13c.9 0 1.6-.8 1.6-1.7V2c0-1-.7-1.6-1.6-1.6zM9.4 2.7a1.6 1.6 0 110 3.2 1.6 1.6 0 010-3.2zm3 9.6H2.3c-.4 0-.6-.3-.4-.7l2.8-5.4c.2-.3.5-.4.8 0l2.7 3.5c.3.4.8.4 1 .1l.7-.7c.4-.3.8-.2 1 .1l1.8 2.5c.2.3 0 .6-.3.6z" />
+                                </svg>
+                            </button>
+
+                            <button class="search_submit icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" style="isolation:isolate"
+                                    viewBox="26.754 0 16.991 14.113" width="22.655" height="18.817">
+                                    <defs />
+                                    <path
+                                        d="M27.709 8.389l-.027-.006h11.37l-3.574 3.582a.93.93 0 00-.271.66.93.93 0 00.271.66l.556.556a.922.922 0 00.656.272.922.922 0 00.657-.271l6.127-6.127a.92.92 0 00.271-.658.92.92 0 00-.271-.659L37.347.271A.922.922 0 0036.69 0a.921.921 0 00-.656.271l-.556.556a.922.922 0 00-.271.657c0 .248.096.469.271.644l3.614 3.602H27.696a.962.962 0 00-.942.953v.787c0 .512.443.919.955.919z" />
+                                </svg>
+                            </button>
+
+                        </div>
+                    </div>
+                    <div onclick="toggledDarkMode()" class="mode-toggle">
+                        <span class="icon dark-icon">
+                            <img src="Images/svg/night.svg" alt="Toggle Dark Mode">
+                        </span>
+                        <span class="icon light-icon">
+                            <img src="Images/svg/light.svg" alt="Toggle Light Mode">
+
+                        </span>
+                    </div>
+
+                </div>
+                <div class="block">
+                    <div class="color-search">                       
+                    </div>
+                </div>
+
+
+
+            </section>
+
+
+            <section class="bg-transparent search-results show-if-results">
+            </section>
+
+
+            <section class="hide-if-results">
+                <div class="block">
+                    <div class="logo">
+                        <h1>Googwe <span>images</span></h1>
+                        <div onclick="toggledDarkMode()" class="mode-toggle">
+                            <span class="icon dark-icon">
+                                <img src="Images/svg/night.svg" alt="Toggle Dark Mode">
+                            </span>
+                            <span class="icon light-icon">
+                                <img src="Images/svg/light.svg" alt="Toggle Light Mode">
+
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="block">
+
+                    <div class="search-box">
+                      
+                        <div class="search-box-input">
+                            
+                            <div class="search-box-input-image">
+                                <span>
+                                    <img src="Images/face/img_1.jpg">
+                                </span>
+
+                                <p>image.jpeg</p>
+
+                                <span class="search-box-input-image-close">&#10005;</span>
+                            </div>
+                            <input value="" type="search" class="search_input">
+
+                        </div>
+                        <div class="search-box-icons">
+                            <button class="choose_image icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" style="isolation:isolate"
+                                    viewBox="0 0.3 14.5 13.6">
+                                    <defs />
+                                    <path
+                                        d="M12.9.3H1.6C.7.3 0 1 0 1.9v10.3c0 1 .7 1.7 1.6 1.7H13c.9 0 1.6-.8 1.6-1.7V2c0-1-.7-1.6-1.6-1.6zM9.4 2.7a1.6 1.6 0 110 3.2 1.6 1.6 0 010-3.2zm3 9.6H2.3c-.4 0-.6-.3-.4-.7l2.8-5.4c.2-.3.5-.4.8 0l2.7 3.5c.3.4.8.4 1 .1l.7-.7c.4-.3.8-.2 1 .1l1.8 2.5c.2.3 0 .6-.3.6z" />
+                                </svg>
+                            </button>
+
+                            <button class="search_submit icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" style="isolation:isolate"
+                                    viewBox="26.754 0 16.991 14.113" width="22.655" height="18.817">
+                                    <defs />
+                                    <path
+                                        d="M27.709 8.389l-.027-.006h11.37l-3.574 3.582a.93.93 0 00-.271.66.93.93 0 00.271.66l.556.556a.922.922 0 00.656.272.922.922 0 00.657-.271l6.127-6.127a.92.92 0 00.271-.658.92.92 0 00-.271-.659L37.347.271A.922.922 0 0036.69 0a.921.921 0 00-.656.271l-.556.556a.922.922 0 00-.271.657c0 .248.096.469.271.644l3.614 3.602H27.696a.962.962 0 00-.942.953v.787c0 .512.443.919.955.919z" />
+                                </svg>
+                            </button>
+
+                        </div>
+                    </div>
+
+                   
+
+                </div>
+                <div class="block">
+                    <div class="color-search width84">
+                        
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="show-if-loading">
+            <span class="loading-animation">
+                <div></div>
+                <div></div>
+                <div></div>
+            </span>
+            <h3>Please hold tight while we load the data for you. <br>It might take a while.</h3>
+            </section>
+        </main>
+        <canvas width="1920" height="1280" class="hide"></canvas>
+        
+    </body>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/Image_Processing.js"></script>
+    <script src="js/XML_Database.js"></script>
+    <script src="js/ISearchEngine.js"></script>
+    <script src="js/ISearchEngine_Manager.js"></script>
+    
+    <script class="delete-on-load">
+/*
+%ABC Notation (saving you the trouble of removing the whitespaces)
+
+X:1
+T:7 Rings
+M:1/4
+L:1/16
+K:C
+Q:106
+^C6 |^c6 | ^C6 |^c6 | A,6 |
+A6 | A,6 |A2 | ^G4 |
+^F,6 |^F6 | ^F,6 |^F4 |
+G,2 | ^G,6 |^G6 | ^G,6 |
+C6
+*/
+
+/*
+% If you are want to listen to this online, paste the notation into this website
+% https://www.abcjs.net/abcjs-editor.html
+
+% NOTATION BEGIN
+X:1
+T:7 Rings
+M:1/4
+L:1/16
+K:C
+Q:27
+^C6 |^c6 | ^C6 |^c6 | A,6 |
+A6 | A,6 |A2 | ^G4 |
+^F,6 |^F6 | ^F,6 |^F4 |
+G,2 | ^G,6 |^G6 | ^G,6 |
+C6
+% NOTATION END
+*/
+
+    </script>
+    <script> window.onload = main(); </script>
+
+</html>

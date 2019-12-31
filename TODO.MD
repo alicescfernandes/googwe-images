@@ -1,0 +1,18 @@
+- ~~Carregar enter para pesquisar~~
+- ~~Integrar pesquisa por cor como deve de ser~~
+- ~~Integrar a pesquisa por imagem~~
+- testar com light mode
+- ~~xml largura e altura~~
+- ~~Página para quando a pesquisa n tem resultados~~
+- ~~pesquisa sem palavras não muda a página~~
+- 3 easter eggs
+- ~~check for images on drop~~
+- ~~file input for images~~
+- test with all images
+- loading animation when processing the image from the inputs
+- 
+# extra
+- ~~infinite scroll~~
+- ~~animação de carregamento~~
+- animaçoes gerais
+- mobile css support

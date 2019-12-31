@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<images>
+   <image class="beach">
+      <ID>2332997000</ID>
+      <path>Images/beach/img_1.jpg</path>
+      <title>........h..........O.......M......?.........................i....</title>
+      <description>null</description>
+      <latitude>52.109074</latitude>
+      <longitude>4.271836</longitude>
+      <date>Sun Feb 17 17:44:07 GMT 2008</date>
+      <dominantcolor>#A04000</dominantcolor>
+   </image>
+   <image class="beach">
+      <ID>2332172539</ID>
+      <path>Images/beach/img_2.jpg</path>
+      <title>Cannon Beach sunset clouds</title>
+      <description>null</description>
+      <latitude>45.88992</latitude>
+      <longitude>-123.96389</longitude>
+      <date>Sat Mar 01 17:55:01 GMT 2008</date>
+      <dominantcolor>#A0A080</dominantcolor>
+   </image>
+   <image class="beach">
+      <ID>2332172791</ID>
+      <path>Images/beach/img_3.jpg</path>
+      <title>Cannon Beach sunset clouds</title>
+      <description>null</description>
+      <latitude>45.88992</latitude>
+      <longitude>-123.96389</longitude>
+      <date>Sat Mar 01 17:56:05 GMT 2008</date>
+      <dominantcolor>#808080</dominantcolor>
+   </image>
+   <image class="beach">
+      <ID>2332991118</ID>
+      <path>Images/beach/img_4.jpg</path>
+      <title>The ocean approaches</title>
+      <description>null</description>
+      <latitude>45.88856</latitude>
+      <longitude>-123.96641</longitude>
+      <date>Sat Mar 01 11:03:27 GMT 2008</date>
+      <dominantcolor>#808080</dominantcolor>
+   </image>
+   <image class="beach">
+      <ID>2332994860</ID>
+      <path>Images/beach/img_64.jpg</path>
+      <title>Cannon Beach sunset wide</title>
+      <description>null</description>
+      <latitude>45.88992</latitude>
+      <longitude>-123.96389</longitude>
+      <date>Sat Mar 01 17:46:27 GMT 2008</date>
+      <dominantcolor>#406040</dominantcolor>
+   </image>
+   
+</images>

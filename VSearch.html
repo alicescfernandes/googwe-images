@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="PCM Final Project - Visual Search">
+    <meta name="keywords" content="HTML5, CSS, JavaScript">
+    <meta name="author" content="Rui Jesus">
+    <meta charset="UTF-8">
+    <title>Visual Search</title>
+    <link rel="stylesheet" href="css/VSearchStyle.css">
+  
+</head>
+<body style="height:200px;border:1px solid black" ondrop="drop(event)" ondragover="allowDrop(event)">
+<header id="header1"></header>
+
+<section id="query">
+
+</section>
+
+<section id="tools">
+
+</section>
+<form id="form">
+<input name="search_field" value="car" type="search"></input>
+<input checked type="radio" name="color" value="">none
+<input type="radio" name="color" value="#a0a080"> #a0a080
+<button id="search">Search</button>
+</form>
+<section style="display:none" id="visualizacao"  >
+    <canvas id="canvas" width="1100" height="1100">
+        Your browser doesn't recognize the canvas element
+    </canvas>
+</section>
+
+<footer>
+</footer>
+
+
+<script> window.onload = main(); </script>
+</body>
+</html>
