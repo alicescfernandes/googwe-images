@@ -1,11 +1,11 @@
 - ~~Carregar enter para pesquisar~~
 - ~~Integrar pesquisa por cor como deve de ser~~
 - ~~Integrar a pesquisa por imagem~~
-- testar com light mode
+- ~~testar com light mode~~
 - ~~xml largura e altura~~
 - ~~Página para quando a pesquisa n tem resultados~~
 - ~~pesquisa sem palavras não muda a página~~
-- 3 easter eggs
+- 1 easter eggs
 - ~~check for images on drop~~
 - ~~file input for images~~
 - test with all images
