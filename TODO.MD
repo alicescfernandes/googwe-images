@@ -16,3 +16,6 @@
 - ~~animação de carregamento~~
 - animaçoes gerais
 - mobile css support
+- bag of words
+- --image opacity--
+- color search as advanced filter

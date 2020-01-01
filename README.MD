@@ -6,7 +6,9 @@ _i like to write theese, even if it is for colege projects._
 
 _This projects are usually hard, and give alot more work that it seems, it is only fair that i at least document some of it. So here it comes..._
 
-Why Googew? I have an issue with pronouncing "l" in certain words, so it just seamed appropriate. It was a google-like image search, taking out the back-end part
+Why Googew? I have an issue with pronouncing "l" in certain words, so it just seamed appropriate. It was a google-like image search, taking out the back-end part.
+
+This code relys on xml as "data markup". It's not my ideia, and i don't like XML either but since it was a rquired item of the work assignemnt, i just left as it was. Probably going to replace this with JSON anyway (in a near future).
 
 # Features
 - Search by image similarities
@@ -96,7 +98,7 @@ Initially this was on the main js file, and it sucked, because my page would jus
 Workers and Promises go hand in hand (or maybe not, if you don't want to use promises).
 
 # TODO
-I would like to develop a python-based backend for this, that would do the image calculations and just return the images
+I would like to develop a python-based backend for this, that would do the image calculations and just return the images. I would also like to get rid of all of the xml code, and use json instead
 
 _I believe that this is as more technical as it can get. I will present you with MDN documentation links, so you can have your geek moment_
 
