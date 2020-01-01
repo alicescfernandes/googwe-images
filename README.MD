@@ -1,12 +1,45 @@
+# Googwe Images
+
+![preview](Images/og-image-2.jpg)
+
 _i like to write theese, even if it is for colege projects._
 
 _This projects are usually hard, and give alot more work that it seems, it is only fair that i at least document some of it. So here it comes..._
 
+Why Googew? I have an issue with pronouncing "l" in certain words, so it just seamed appropriate. It was a google-like image search, taking out the back-end part
+
+# Features
+- Search by image similarities
+- Search by dominant color
+
+Not requested on the work assigment, but still did it anyway
+- Dark Mode, _its a trend, it seems_
+- Computation on service workers
+- Infinite scroll
+- Bag-Of-Words for better image searc by text
+
 # Colors and histograms
-[todo]
+For the purpose of this project, the students were provided with a 12 color palette. The goal is, for each image, to calculate the anmout of each color. That way, you calculate which of 12 twelve colors is the most dominate. You end up calculating an histogram of 12 bins, and take the bin with the highest value as the most dominant color. 
+
+To do this, you must iterate for each pixel, and with the R,G & B of that pixel, calculate a Manhattan distance for each of those 12 colors.
+If the calculated Manhattan distance is bigger than a treshold value (of your choice), you increase the respective bin by one.
+
+This method leads to crazy values like 10990 and also alot of 0's (depending on the treshold value). Is computer intensive, so just don't go do this calculation on 1920 $\times$ 1280 images, for your own sake.
 
 # Searching by image similarities
-[todo]
+The measurment used for this search is by calculating color moments. 
+Let's say you have an image (image 1) that you want to compare to other images. One way that you can go about this is to compare that image 1, pixel by pixel, with all of the other images, but that takes just so much time... that is not worth it. Instead, you can calculate color moments. Color moments its a way of classifying an image, based on the HSV color system. 
+The way it works is pretty straightforward:
+- Convert any RBG image to the HSV color
+- Divide said converted image to nine equal blocks
+- For each block calculate the mean and standart deviation for the Hue, the mean and standart deviation for the Saturation and the mean and standart deviation for the Value. At the very end, you should have 6 values per block, we call this color moments. Since you have 9 blocks, you should have 3 $\times$ 9 values. 
+- Do that same process the other images
+
+Then, just calculate the Manhattan Distance of all of the color moments of image 1, with the color moments all of  the other images, and the shorter the distance, the more similiar it is.
+
+This takes some serious computation time, hence i choose to put this o the service worker (described below)
+
+[Wikipedia is a better at explaining than i am, so i'm linking their article. They provide a better introduction at this](https://en.wikipedia.org/wiki/Color_moments)
 
 # Workers, workers, how did you manage to get this running with workers...
 
@@ -62,5 +95,8 @@ Initially this was on the main js file, and it sucked, because my page would jus
 
 Workers and Promises go hand in hand (or maybe not, if you don't want to use promises).
 
-_I beleive that this is as more technical as it can get. I will present you with MDN documentation links, so you can have your geek moment_
+# TODO
+I would like to develop a python-based backend for this, that would do the image calculations and just return the images
+
+_I believe that this is as more technical as it can get. I will present you with MDN documentation links, so you can have your geek moment_
 
