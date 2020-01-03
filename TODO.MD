@@ -17,5 +17,5 @@
 - animaçoes gerais
 - mobile css support
 - bag of words
-- --image opacity--
+- ~~image opacity~~
 - color search as advanced filter
