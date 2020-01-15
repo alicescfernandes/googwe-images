@@ -20,7 +20,7 @@ Not requested on the work assigment, but still did it anyway
 - Infinite scroll
 
 # Colors and histograms
-For the purpose of this project, the students were provided with a 12 color palette. The goal is, for each image, to calculate the anmout of each color. That way, you calculate which of 12 twelve colors is the most dominate. You end up calculating an histogram of 12 bins, and take the bin with the highest value as the most dominant color. 
+For the purpose of this project, the students were provided with a 12 color palette. The goal is, for each image, to calculate the amount of each color. That way, you calculate which of 12 twelve colors is the most dominate. You end up calculating an histogram of 12 bins, and take the bin with the highest value as the most dominant color. 
 
 To do this, you must iterate for each pixel, and with the R,G & B of that pixel, calculate a Manhattan distance for each of those 12 colors.
 If the calculated Manhattan distance is bigger than a treshold value (of your choice), you increase the respective bin by one.
