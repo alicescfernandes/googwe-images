@@ -18,7 +18,6 @@ Not requested on the work assigment, but still did it anyway
 - Dark Mode, _its a trend, it seems_
 - Computation on service workers
 - Infinite scroll
-- Bag-Of-Words for better image searc by text
 
 # Colors and histograms
 For the purpose of this project, the students were provided with a 12 color palette. The goal is, for each image, to calculate the anmout of each color. That way, you calculate which of 12 twelve colors is the most dominate. You end up calculating an histogram of 12 bins, and take the bin with the highest value as the most dominant color. 
