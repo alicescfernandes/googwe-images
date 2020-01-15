@@ -1,5 +1,6 @@
 //Declaring a global variable which will be created in main function 
 const app = new ISearchEngine("xml/database_parsed.xml",true);
+
 const noResults = "<span class='search-no-results'><p>Your search criteria didn't match any results.</p></span>"
 
 let requestingInfiniteScroll = false;
@@ -51,7 +52,7 @@ function main() {
                         <div></div>
                     </span>`;
                     paintResults(results)
-                    window.location.hash = "#/results"
+                   
 
                 });
                 return;
@@ -236,14 +237,20 @@ function toggledDarkMode() {
         console.log("U2ltIExlbywgaXN0byBz428gbWFyaXF1aWNlcyE=");
     }
 }
+
 function onImageLoaded(event){
-    event.target.style.marginTop = -1 * (event.target.getClientRects()[0].height - 220) / 2 + "px"
+    let marginTop = 0
+    if(event.target.getClientRects().length > 0){
+        marginTop = (-1 * (event.target.getClientRects()[0].height - 220) / 2 || 0)
+    }
+    event.target.style.marginTop = marginTop + "px"
     event.target.classList.add("image-loaded")
     event.target.style.animationDelay = 50 * event.target.dataset.idx + "ms"
 }
 
 //Function to make the image list on the results page
 function paintResults(results,) {
+    window.location.hash = "#/results";
     results.forEach((element,idx) => {
         let searchItem = `<div class="search-result">
                             <div class="search-result-image" style="background-color:${element.dominantColor};">

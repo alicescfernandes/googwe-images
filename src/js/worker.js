@@ -129,6 +129,7 @@ class ColorMoments {
         medianValue = medianValue / (pixels.length / 4)
         medianSaturation = medianSaturation / (pixels.length / 4)
 
+        debugger;
 
         for(let p = 0; p < pixels.length; p += 4) {
             var [h,s,v] = self.rgbToHsv(pixels[p],pixels[p + G],pixels[p + B]);
@@ -142,9 +143,9 @@ class ColorMoments {
         //varSaturation = (varSaturation - (pixelsPerColor * (medianSaturation ** 2))) / (pixelsPerColor - 1)
         //varValue = (varValue - (pixelsPerColor * (medianValue ** 2))) / (pixelsPerColor - 1)
 
-        varHue = Math.sqrt(varHue / pixelsPerColor - 1)
-        varSaturation = Math.sqrt(varSaturation / pixelsPerColor - 1)
-        varValue = Math.sqrt(varValue / pixelsPerColor - 1)
+        varHue = Math.sqrt(varHue / (pixelsPerColor - 1)) || 0;
+        varSaturation = Math.sqrt(varSaturation / (pixelsPerColor - 1)) || 0;
+        varValue = Math.sqrt(varValue / (pixelsPerColor - 1)) || 0;
 
         //varAlpha = (varAlpha - (pixelsPerColor * (medianAlpha ** 2))) / (pixelsPerColor - 1)
         //console.log(pixelsPerColor)

@@ -133,7 +133,6 @@ class ISearchEngine {
                             images[i].setAttribute("width",data.imgobj.width)
                             images[i].setAttribute("height",data.imgobj.height)
                             images[i].setAttribute("keywords",data.keywords)
-                            images[i].querySelector("dominantcolor").remove()
                             //self.imageProcessed(images[i])
                             self.imageProcessed(data)
                         });
@@ -256,16 +255,19 @@ class ISearchEngine {
         for(let k in this.allpictures.stuff){
             var p = this.calcManhattanDist(img1,this.allpictures.stuff[k])
             results.push( [p,this.allpictures.stuff[k]] )
-        }
+        }   
 
-        return this.sortByColorMoments(results).map(function(el){
+        this.currentPage = 0;
+        this.queryResults = this.sortByColorMoments(results).map(function(el) {
             return el[1]
         });
+        return this.loadMore()
     }
 
     //Method to compute the Manhattan difference between 2 images which is one way of measure the similarity
     //between images.
     calcManhattanDist(img1, img2) {
+        debugger;
         let manhattan = 0;
 
         for (let i = 0; i < img1.color_moments.length; i++) {
