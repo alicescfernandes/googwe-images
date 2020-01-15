@@ -8,7 +8,7 @@ _This projects are usually hard, and give alot more work that it seems, it is on
 
 Why Googwe? I have an issue with pronouncing "l" in certain words, so it just seamed appropriate. It was a google-like image search, taking out the back-end part.
 
-This code relys on xml as "data markup". It's not my ideia, and i don't like XML either but since it was a rquired item of the work assignemnt, i just left as it was. Probably going to replace this with JSON anyway (in a near future).
+This code relys on xml as "data markup". It's not my ideia, and i don't like XML either but since it was a required item of the work assignemnt, i just left as it was. Probably going to replace this with JSON anyway (in a near future).
 
 # Features
 - Search by image similarities
