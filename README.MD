@@ -80,24 +80,22 @@ And that's all there is to it.
 ### Oh God, there was trouble... and this is how i fixed it
 This dynamic adds asynchronous events to the equation, so in my particular case, i had to wrap this communication in promises. I'm not going to the details on how i got this with promises, but let me tell you, it's. a. pain. Each one of this promises resolves whenever i get a message from the worker.
 
-And there's also the added problem of adding multiple event listeners to the save event, and you end up calling functions for repeaded events. In order to solve this, you add a main event listener, and register the callbacks on a separate functions with id's, and just make the worker post-message with that id, and on the client side, you use that id to trigger the callback registered to that id. Confusing right?
+And there's also the added problem of adding multiple event listeners to the same event, and you end up calling functions for repeateed events. In order to solve this, you add a main event listener, and register the callbacks on a separate functions with id's, and just make the worker post the message with that id, and on the client side, you use that id to trigger the callback registered to that id. Confusing right?
 
 ![confused travolta](https://media.giphy.com/media/hEc4k5pN17GZq/source.gif)
 
 Even i was, and that's how i manage to solve it!
 
 ### Worker doing ~~meth~~ math:
-What i do is to send some values to the worker, the worker performs some ridiculous math stuff (that takes in alot of numbers, and performs some very long loops), and sends me back those results. Putting this on a diagram would look like this
-[image here]
+What i do is to send some values to the worker, the worker performs some ridiculous math stuff (that takes in alot of numbers, and performs some very long loops), and sends me back those results.
 
 While this takes some computing power, the advantage is that this is not render-blocking, and you would just navigate on the page without almost noticing (but you computer would be on steroids when doing this operations). 
-Initially this was on the main js file, and it sucked, because my page would just freeze for a while, and the just return to normal. Now at least i can get some fancy animation going. I believe that there isn't an actual perfomance improvement when doing this via workers, the biggest advantage is that you avoid your script being render blocking, but i haven't measured any perfomace so, i don't really now if this represents any perfomance optimization.
 
+
+Initially this was on the main js file, and it sucked, because my page would just freeze for a while, and the just return to normal. Now at least i can get some fancy animation going. I believe that there isn't an actual perfomance improvement when doing this via workers, the biggest advantage is that you avoid your script being render blocking, but i haven't measured any perfomace so, i don't really now if this represents any perfomance optimization.
 
 Workers and Promises go hand in hand (or maybe not, if you don't want to use promises).
 
 # TODO
-I would like to develop a python-based backend for this, that would do the image calculations and just return the images. I would also like to get rid of all of the xml code, and use json instead
-
-_I believe that this is as more technical as it can get. I will present you with MDN documentation links, so you can have your geek moment_
+I would like to develop a python-based backend for this, that would do the image calculations and just return the images. I would also like to get rid of all of the xml code, and use json instead. It would be even cooler to add machine learning to the image description, and make the AI give back the results from the search query...
 
