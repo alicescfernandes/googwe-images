@@ -6,7 +6,7 @@ _i like to write theese, even if it is for colege projects._
 
 _This projects are usually hard, and give alot more work that it seems, it is only fair that i at least document some of it. So here it comes..._
 
-Why Googew? I have an issue with pronouncing "l" in certain words, so it just seamed appropriate. It was a google-like image search, taking out the back-end part.
+Why Googwe? I have an issue with pronouncing "l" in certain words, so it just seamed appropriate. It was a google-like image search, taking out the back-end part.
 
 This code relys on xml as "data markup". It's not my ideia, and i don't like XML either but since it was a rquired item of the work assignemnt, i just left as it was. Probably going to replace this with JSON anyway (in a near future).
 
