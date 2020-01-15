@@ -20,7 +20,7 @@ Not requested on the work assigment, but still did it anyway
 - Infinite scroll
 
 # Colors and histograms
-For the purpose of this project, the students were provided with a 12 color palette. The goal is, for each image, to calculate the amount of each color. That way, you calculate which of 12 twelve colors is the most dominate. You end up calculating an histogram of 12 bins, and take the bin with the highest value as the most dominant color. 
+For the purpose of this project, the students were provided with a 12 color palette. The goal is, for each image, to calculate the amount of each color. That way, you calculate which of 12 twelve colors is the most dominant. You end up calculating an histogram of 12 bins, and take the bin with the highest value as the most dominant color. 
 
 To do this, you must iterate for each pixel, and with the R,G & B of that pixel, calculate a Manhattan distance for each of those 12 colors.
 If the calculated Manhattan distance is bigger than a treshold value (of your choice), you increase the respective bin by one.
@@ -46,7 +46,7 @@ This takes some serious computation time, hence i choose to put this o the servi
 
 Well, this is where things get wild...Let me tell you, it was an adventure.
 
-So, workers are a fancy new javascript functionality, available in all modern browsers, that allow you to run javascript in diferent context of your main js. If you have a java background, it works almost as a thread **(except that javascript in-browser doesn't have threads)** and it has a more restrict context, such that there's no ``document.body`` available inside workers, there'se even no ``window`` inside workers (if you want to access the global scope of a worker, you use the ``this`` keyword within the worker javascript file, in fact, when you do this, the devtools console gently gives you a ``DedicatedWorkerGlobalScope`` object, not a ``window`` as in normal javascript context execution)
+So, workers are a fancy new javascript functionality, available in all modern browsers, that allow you to run javascript in diferent context of your main js. If you have a java background, it works almost as a thread **(except that javascript in-browser doesn't have exactly threads)** and it has a more restrict context, such that there's no ``document.body`` available inside workers, there'se even no ``window`` inside workers (if you want to access the global scope of a worker, you use the ``this`` keyword within the worker javascript file, in fact, when you do this, the devtools console gently gives you a ``DedicatedWorkerGlobalScope`` object, not a ``window`` as in normal javascript context execution)
 
 So, how to the workers comunicate with the main javascript? The workers are indeed instatiated within a javascript file. You just create a ``Worker`` object, and pass in the url of a javascript file, and you have a worker.
 
