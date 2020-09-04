@@ -15,7 +15,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-svgo": "^2.1.1",
     "gulp-terser": "^1.2.0",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
     "terser": "^4.4.3"
   }
 }
